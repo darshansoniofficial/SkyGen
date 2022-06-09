@@ -1,0 +1,327 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+body {
+    background: url("images/background.jpg");
+    font-family: Montserrat;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow-x: hidden;
+    color: white;
+    padding: 10px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.04);
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    position: relative;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    z-index: 0;
+}
+
+li a:hover,
+li a:focus:before {
+    color: #fff;
+}
+
+.responsive {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    max-height: 800px;
+    object-fit: fill;
+}
+
+.title {
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.304);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.card {
+    position: relative;
+}
+
+.card:hover .title {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.follow {
+    position: absolute;
+}
+
+ul {
+    overflow: hidden;
+}
+
+li {
+    display: inline-block;
+}
+
+.btn {
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    border-radius: 50%;
+}
+
+@media (max-width: 388px) {
+    .quick {
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 388px) {
+    .gett {
+        margin-top: 37px;
+    }
+    .logot {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .card {
+        max-width: 300px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product-card {
+        max-height: 300px;
+        max-width: 300px;
+    }
+    .card-group {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-logo {
+        max-width: 100px;
+        max-height: 50px;
+        position: relative;
+    }
+    .follow {
+        font-size: 20px;
+    }
+    .nav-item-footer {
+        font-size: 11px;
+    }
+    .card-text {
+        font-size: 15px;
+    }
+    .row img {
+        width: 250px;
+    }
+    .element {
+        display: unset;
+    }
+    .elements {
+        margin-top: 50px;
+    }
+    .followus {
+        margin-top: 100px;
+    }
+    .logot {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .product-card {
+        max-height: 300px;
+        max-width: 300px;
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+    }
+    .card-group {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .footer-logo {
+        max-width: 100px;
+        max-height: 50px;
+        position: relative;
+    }
+    .follow {
+        font-size: 20px;
+    }
+    .nav-item-footer {
+        font-size: 13px;
+    }
+    .row {
+        font-size: 12px;
+    }
+    .row img {
+        width: 230px;
+    }
+    .element {
+        display: unset;
+    }
+    .elements {
+        margin-top: 50px;
+    }
+    .followus {
+        margin-top: 100px;
+    }
+    .descript {
+        text-align: justify;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .product-card {
+        max-height: 300px;
+        max-width: 300px;
+        margin-right: 50px;
+    }
+    .product-card:last-child {
+        margin-right: 0;
+    }
+    .card-group {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .footer-logo {
+        max-width: 160px;
+        max-height: 80px;
+        position: relative;
+    }
+    .follow {
+        font-size: 24px;
+    }
+    .nav-item-footer {
+        font-size: 14px;
+    }
+    .row {
+        font-size: 12px;
+    }
+    .row img {
+        width: 200px;
+    }
+    .contact {
+        margin-right: 38px;
+    }
+    .element {
+        display: flex;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .product-card {
+        max-height: 300px;
+        max-width: 300px;
+        margin-right: 100px;
+    }
+    .product-card:last-child {
+        margin-right: 0;
+    }
+    .card-group {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .footer-logo {
+        max-width: 200px;
+        max-height: 100px;
+        position: relative;
+    }
+    .follow {
+        font-size: 24px;
+    }
+    .nav-item-footer {
+        font-size: 15px;
+    }
+    .row img {
+        width: 240px;
+    }
+    .followus {
+        margin-right: 24px;
+    }
+    .contact {
+        margin-right: 74px;
+    }
+    .element {
+        display: flex;
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-card {
+        max-height: 300px;
+        max-width: 300px;
+        margin-right: 120px;
+    }
+    .product-card:last-child {
+        margin-right: 0;
+    }
+    .card-group {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .footer-logo {
+        max-width: 200px;
+        max-height: 100px;
+        position: relative;
+    }
+    .follow {
+        font-size: 26px;
+    }
+    .nav-item-footer {
+        font-size: 17.2px;
+    }
+    .logo {
+        max-height: 80px;
+        height: auto;
+    }
+    .textofcard {
+        font-size: 10px;
+    }
+    .row img {
+        width: 300px;
+    }
+    .followus {
+        margin-right: 49px;
+    }
+    .contact {
+        margin-right: 155px;
+    }
+    .element {
+        display: flex;
+        margin-right: -39px;
+    }
+}

@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="https://i.postimg.cc/cCsLbZyw/background.jpg" as="image" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+    <title>SKYGEN | Home</title>
+</head>
+<style>
+    ul {
+        overflow: hidden;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    .logo {
+        text-align: center;
+    }
+    
+    .logo li {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    #container {
+        position: relative;
+    }
+    
+    video {
+        width: 100%;
+        height: auto;
+    }
+    
+    #changeVideo {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        /* Additional styles just to increase visual appeal */
+        border-radius: 50%;
+        color: red;
+        font-weight: bold;
+        line-height: 25px;
+        text-align: center;
+        /* End */
+    }
+    /* On hovering the video, show the button */
+    
+    video:hover~#changeVideo {
+        opacity: 1;
+    }
+    
+    #changeVideo:hover {
+        opacity: 1;
+    }
+</style>
+<script>
+    window.onload = function() {
+        var muteButton = document.getElementById("mute");
+
+        muteButton.addEventListener("click", function() {
+            var video = document.getElementById("myVideo");
+            if (video.muted == false) {
+                // Mute the video
+                video.muted = true;
+
+                // Update the button text
+                muteButton.innerHTML = "<i class='fa fa-volume-off'></i>";
+            } else {
+                // Unmute the video
+                video.muted = false;
+
+                // Update the button text
+                muteButton.innerHTML = "<i class='fa fa-volume-up'></i>";
+            }
+        });
+
+
+    };
+</script>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transperant">
+        <div class="container-fluid">
+            <a class="navbar-brand ml-4" href="#"><img src="https://i.postimg.cc/wx0mSztD/logo1.png" style="max-height: 80px; height:auto;"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                </ul>
+                <div class="d-flex">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./aboutus.html">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="./services.html">SERVICES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contact.html">CONTACT</a>
+                        </li>
+
+                    </ul>
+                    <a href="https://tennisshop.ae/"><img class="logot" src="https://i.postimg.cc/fbsH8dgw/1.png" height="70"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div id="container">
+
+            <video autoplay="true" muted loop id="myVideo">
+                <source src="videos/Banner.mp4" type="video/mp4">
+              </video>
+            <script>
+                var media = document.getElementById("myVideo");
+                const playPromise = media.play();
+                if (playPromise !== null) {
+                    playPromise.catch(() => {
+                        media.play();
+                    })
+                }
+            </script>
+            <div id="changeVideo">
+                <button class="btn" type="button" id="mute"><i class='fa fa-volume-off'></i></button>
+            </div>
+
+        </div>
+    </div>
+    <!--Brand_Banner-->
+    <div class="brand text-center " style="margin-top: 100px; margin-bottom: 100px;">
+        <img src="https://i.postimg.cc/1tDKpjMJ/brand-logo.png" class="responsive justify-content-cente" style="max-width: 1085px;" />
+    </div>
+
+    <!--Craousal-->
+    <div class="carousel">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item ">
+                    <img src="https://i.postimg.cc/hPY7t01j/shoes-banner.jpg" class="d-block w-100" alt="..." style="max-height: 710px;">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://i.postimg.cc/BbYPD5Wm/Nike-banner.jpg" class="d-block w-100" alt="..." style="max-height: 710px;">
+                </div>
+                <div class="carousel-item active">
+                    <img src="https://i.postimg.cc/CLxj15yv/hydrogen-banner.jpg" class="d-block w-100" alt="..." style="max-height: 700px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--EndVrousal-->
+
+    <!--Products-->
+    <div class="products justify-content-center text-center" style="margin-bottom: 100px;">
+        <div class="card-group p-3 justify-content-center" style="margin-top: 100px; margin-bottom: 50px;">
+
+
+            <div class="card product-card">
+                <a href="services.html">
+                    <img src="https://i.postimg.cc/hvP7fyYJ/product5.jpg" class="card-img-top" alt="..." style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>TENNIS APPARELS</h4>
+                    </div>
+                </a>
+
+            </div>
+            <div class="card product-card">
+                <a href="services.html">
+                    <img src="https://i.postimg.cc/PxMwfsSs/product4.jpg" class="card-img-top " alt="... " style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>TENNIS SHOES</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card" style="max-height: 300px; max-width: 300px; ">
+
+                <a href="services.html">
+                    <img src="https://i.postimg.cc/3RhGHJCF/product3.jpg" class="card-img-top " alt="... " style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>TENNIS RACKETS</h4>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="card-group p-3 justify-content-center" style="margin-top: 50px;">
+            <a href="services.html">
+                <div class="card product-card">
+                    <img src="https://i.postimg.cc/QM17PW5M/product2.jpg" class="card-img-top" alt="..." style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>PADEL SHOES</h4>
+                    </div>
+            </a>
+            </div>
+            <div class="card product-card">
+                <a href="services.html">
+                    <img src="https://i.postimg.cc/WbY0JVTs/product1.jpg" class="card-img-top " alt="... " style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>PADEL RACKETS</h4>
+                    </div>
+                </a>
+            </div>
+            <div class="card " style="max-height: 300px; max-width: 300px; ">
+                <a href="services.html">
+                    <img src="https://i.postimg.cc/c4CnWzY2/product6.jpg" class="card-img-top " alt="... " style="max-height: 300px; max-width: 300px;">
+                    <div class="title">
+                        <h4>PADEL BAGS</h4>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="container" style="color: white;">
+        <footer class="row  py-5 my-5 border-top">
+            <div class="col">
+                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                    <img src="https://i.postimg.cc/wx0mSztD/logo1.png" class="footer-logo">
+                </a>
+                <ul class="follow">
+                    <li><a href="https://instagram.com/tennisshop.ae?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram mx-lg-3 mx-md-2 mx-sm-1" style="color: white" ></i></a></li>
+                    <li><a href="tel:+97142506330"><i class="fa fa-whatsapp mx-lg-3 mx-md-2 mx-sm-1" style="color: white" ></i></a></li>
+                    <li><a href="https://www.facebook.com/TennisShopUAE/"><i class="fa fa-facebook mx-lg-3 mx-md-2 mx-sm-1"  style="color: white"></i></a>
+                        <li>
+                </ul>
+            </div>
+
+            <div class=" gett col mx-lg-4 text-center">
+                <h5>Get in Touch</h5>
+                <ul class="nav flex-column row">
+                    <li class="nav-item nav-item-footer mb-2 col"><a href="tel:+97142506330" class="nav-link p-0 text-muted">+971 4250 6330</a></li>
+                    <li class="nav-item nav-item-footer mb-2 col">
+                        <a href="mailto:info@skygentrading.com" class="nav-link p-0 text-muted">
+                            <p>info@skygentrading.com</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="quick col mx-lg-4 text-center">
+                <h5>Quick Links</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item nav-item-footer mb-2"><a href="./index.html" class="nav-link p-0 text-muted">Home</a></li>
+                    <li class="nav-item nav-item-footer mb-2"><a href="./services.html" class="nav-link p-0 text-muted">Services</a></li>
+                    <li class="nav-item nav-item-footer mb-2"><a href="./aboutus.html" class="nav-link p-0 text-muted">About Us</a></li>
+                </ul>
+            </div>
+
+
+
+        </footer>
+    </div>
+    <!-- Footer -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js " integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM " crossorigin="anonymous "></script>
+
+</body>
+
+</html>
